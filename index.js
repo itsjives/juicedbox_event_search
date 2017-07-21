@@ -15,7 +15,7 @@ $button.click(function(event){
   $eSearch.val("");
   $('#events').empty();
   if ($search.match(numericExpression)){
-    var $zEvents = $.get(`http://api.jambase.com/events?zipCode=${$search}&api_key=acud3ypxhh2jjy95wemdy6d5`, function(edata){
+    var $zEvents = $.get(`http://api.jambase.com/events?zipCode=${$search}&api_key=`, function(edata){
       for (var i = 0; i < edata['Events'].length; i++){
         for (var j = 0; j < edata['Events'][i]['Artists'].length; j++){
           // console.log(edata);
